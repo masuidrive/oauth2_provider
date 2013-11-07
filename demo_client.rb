@@ -19,8 +19,8 @@ require 'oauth2'
 
 enable :sessions
 
-CLIENT_TOKEN = 'fSPY3wrtA89A6EASg3gmFw'
-CLIENT_SECRET = 'fVYQqRDyhZS0sDpKtGExRpaN7T4DSJOTKlTAp5vAXw8Ba_Tp-qct_wUZ-eXli3civNZRHDTNy58InjnKZzOONg'
+CLIENT_TOKEN = 'XXXXXX'
+CLIENT_SECRET = 'YYYYYY'
 SERVER_URL = 'http://localhost:3000'
 
 client = OAuth2::Client.new(
