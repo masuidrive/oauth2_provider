@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  identifier: MyString1
+  secret: MyString
+  redirect_uri: MyText
+  official: false
+  name: MyString1
+
+two:
+  identifier: MyString2
+  secret: MyString
+  redirect_uri: MyText
+  official: false
+  name: MyString2

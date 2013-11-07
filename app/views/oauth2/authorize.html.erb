@@ -1,0 +1,18 @@
+<h2>Allow <%= @client.name %> access to your data?</h2>
+<%= form_tag oauth2_allow_path, method: 'post' do %>
+  <div class="description">
+    <p>By allowing access, <%= @client.name %> will be able to:</p>
+    <ul>
+      <li>All operations</li>
+    </ul>
+  </div>
+
+  <% if @error_message %>
+    <div class="error-message"><%= @error_message %></div>
+  <% end %>
+
+  <%= hidden_field_tag :client_id, @client.identifier %>
+  <%= hidden_field_tag :response_type, @response_type %>
+  <%= hidden_field_tag :redirect_uri, @redirect_uri %>
+  <input type="submit" value="Allow" />
+<% end %>

@@ -1,4 +1,16 @@
 Oauth2Provider::Application.routes.draw do
+  get 'demo' => 'demo#show'
+
+  namespace :oauth2 do
+    get 'authorize'
+    get 'sign_in', action: 'new'
+    post 'sign_in'
+    post 'allow'
+    get 'token'
+    post 'token'
+    get 'redirect'
+  end
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

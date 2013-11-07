@@ -19,5 +19,14 @@ module Oauth2Provider
     # The default locale is :en and all translations from config/locales/*.rb,yml are auto loaded.
     # config.i18n.load_path += Dir[Rails.root.join('my', 'locales', '*.{rb,yml}').to_s]
     # config.i18n.default_locale = :de
+
+    # >>> APPEND >>>
+    # OAuth2 Resource Server
+    # note: don't forget
+    require 'rack/oauth2'
+    config.middleware.use Rack::OAuth2::Server::Resource::Bearer, 'Protected Resources' do |req|
+      OAuth::AccessToken.valid.find_by_token(req.access_token) || req.invalid_token!
+    end
+    # <<< APPEND <<<
   end
 end

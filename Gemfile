@@ -27,9 +27,14 @@ gem 'turbolinks'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 1.2'
 
-# OAuth 2.0 Consumer and Provider
+# OAuth 2.0 Provider
 gem "rack-oauth2", "~> 1.0.5"
 
+# gems for demo_client.rb
+group :demo do
+  gem "sinatra", "~> 1.4.4"
+  gem "oauth2", "~> 0.9.2"
+end
 
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.
@@ -40,7 +45,7 @@ end
 # gem 'bcrypt-ruby', '~> 3.1.2'
 
 # Use unicorn as the app server
-# gem 'unicorn'
+gem 'unicorn'
 
 # Use Capistrano for deployment
 # gem 'capistrano', group: :development

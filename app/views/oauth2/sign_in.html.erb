@@ -1,0 +1,10 @@
+<h1>sign_in</h1>
+
+<%= form_tag oauth2_sign_in_path, method: 'post', class: 'form-signin' do %>
+  <input name="username" type="text" value="<%= params[:username] %>" />
+  <input type="submit" name="Sign in" />
+<% end %>
+
+<% if @error_message %>
+  <div class="error-message"><%= @error_message %></div>
+<% end %>

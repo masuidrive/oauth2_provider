@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  user_id: 1
+  o_auth_client_id: 1
+  token: MyString1
+  redirect_uri: MyText
+  expires_at: 2013-11-07 21:47:13
+
+two:
+  user_id: 1
+  o_auth_client_id: 1
+  token: MyString2
+  redirect_uri: MyText
+  expires_at: 2013-11-07 21:47:13
