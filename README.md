@@ -6,6 +6,12 @@
 gem "rack-oauth2", "~> 1.0.5"
 ```
 
+下記でインストールを行う
+
+```
+$ bundle install
+```
+
 ## o_auth/client モデル
 ```
 rails g model o_auth/client identifier:string secret:string redirect_uri:text official:boolean name:string
@@ -121,7 +127,6 @@ $ rails c controller demo
 
 - `app/controllers/demo_controller.rb`を上書き
 
-
 ## テストアカウントを作る
 ```
 $ rails c
@@ -134,6 +139,25 @@ $ rails c
 ## キーを設定
 
 先のコマンドで表示した二つのキーを`demo_client.rb`のCLIENT_TOKENとCLIENT_SECRETにコピー
+
+## デモで使うgemをインストール
+
+下記を、`Gemfile`に追加する
+
+```
+# gems for demo_client.rb
+group :demo do
+  gem "sinatra", "~> 1.4.4"
+  gem "oauth2", "~> 0.9.2"
+end
+```
+
+下記でインストールを行う
+
+```
+$ bundle install
+```
+
 
 ## 実行
 ターミナルを二枚開き、それぞれで下記のコマンドを実行する
