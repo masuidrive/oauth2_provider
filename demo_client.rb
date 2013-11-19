@@ -11,7 +11,7 @@ $ rails c
 $ bundle exec rails server 
 
 # 別のターミナルで下記を実行し、http://localhost:4567/ を開き、ユーザ名 demoでログイン
-$ bundle ruby demo_client.rb
+$ bundle exec ruby demo_client.rb
 =end
 require 'rubygems'
 require 'sinatra'

@@ -1,4 +1,4 @@
-module Concerns::Authentication
+module Concerns::OauthAuthentication
   extend ActiveSupport::Concern
 
   class Unauthorized < StandardError; end

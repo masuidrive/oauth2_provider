@@ -1,3 +1,4 @@
+# encode: utf-8
 class Oauth2Controller < ApplicationController
   def new
     render action: 'sign_in'
@@ -65,7 +66,7 @@ class Oauth2Controller < ApplicationController
 =begin
         user = User.find_by_username(req.username)
         if user && user.authorize(req.password)
-          res.access_token = user.access_tokens.create!(:o_auth2_client => client).to_bearer_token(:with_refresh_token)
+          res.access_token = user.access_tokens.create!(:o_auth_client => client.id).to_bearer_token(:with_refresh_token)
         else
           req.invalid_grant!
         end
